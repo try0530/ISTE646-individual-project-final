@@ -1,0 +1,571 @@
+/* import the poppins font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #ffffff;
+  --second-color: #ffffff;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background-color: #fefae0;
+}
+
+a:checked {
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.section {
+  border-bottom: 1px solid #aaaaaa;
+}
+
+iframe {
+  width: 40rem;
+  height: 40rem;
+  display: block;
+}
+
+/* Nav Bar Start*/
+.navbar-small {
+  display: none;
+  background-color: #ffffff;
+}
+
+.navbar-large {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+}
+
+.navbar-large ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.navbar-large li {
+  padding: 10px;
+  position: relative;
+  margin: 0 1rem;
+}
+
+.navbar-large li:hover {
+  border-bottom: 1px solid #000000;
+}
+
+.navbar-large .submenu {
+  position: absolute;
+  opacity: 0;
+  top: 38px;
+  transition: 0.5s opacity;
+  visibility: hidden;
+}
+
+.navbar-large li:hover .submenu {
+  opacity: 100;
+  visibility: visible;
+  z-index: 1;
+}
+
+.current-page {
+  border-bottom: 2px solid red;
+}
+/* Nav Bar End*/
+
+/* Footer Start */
+footer {
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer li {
+  margin: 0 1rem;
+}
+
+footer li:hover {
+  border-bottom: 1px solid #000000;
+}
+/* Footer End */
+
+/* Breadcrumb Start */
+ul.breadcrumb {
+  margin-top: 10px;
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eeeeee;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 16px;
+}
+
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+/* Breadcrumb End */
+
+/* Time and Weather Start */
+.time-and-weather {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 16px;
+  height: 220px;
+  width: 150px;
+  background: linear-gradient(darkblue, blue);
+  color: #ffffff;
+
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+}
+
+.taipei-time {
+  margin: 5px 0;
+}
+
+.weather button {
+  background-color: #ffffff;
+  border: 1px solid rgb(255, 255, 104);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.weather button:hover {
+  background-color: darkblue;
+  color: #ffffff;
+}
+
+.weather button:active {
+  background-color: blue;
+}
+/* Time and Weather End */
+
+/* Index Page Start */
+.visit-page {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #000000;
+  display: inline-block;
+}
+
+.title-mark {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.learn-more {
+  border: 1px solid #000000;
+  border-radius: 16px;
+  padding: 5px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.learn-more span {
+  margin: 0 10px;
+}
+
+.section div {
+  margin: 1rem;
+}
+
+.home-section {
+  background-image: url(../images/taipei-illustration.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 80vh;
+  text-align: center;
+  position: relative;
+}
+
+.home-section div {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+}
+
+.about-section img {
+  width: 30%;
+  margin: 1rem;
+  border-radius: 24px;
+}
+
+.food-section img,
+.itineraries-section img {
+  width: 50%;
+  margin: 1rem;
+  border-radius: 24px;
+  order: -1;
+}
+
+.activities-section img,
+.transportation-section img {
+  width: 50%;
+  margin: 1rem;
+  border-radius: 24px;
+}
+
+.activities-list {
+  list-style-type: circle;
+  padding-left: 1rem;
+}
+/* Index Page End */
+
+/* About Page Start */
+.geo-section {
+  display: flex;
+}
+
+.geo-section img {
+  margin: 1rem;
+  border-radius: 24px;
+}
+
+.geo-section ul {
+  list-style-type: circle;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+.geo-section li {
+  margin-left: 1rem;
+}
+/* About Page End*/
+
+/* Food Page Start */
+.cards {
+  display: flex;
+}
+
+.card {
+  width: 30vw;
+  border: 1px solid #000000;
+  border-radius: 24px;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.card h4 {
+  margin: 5px 0;
+  height: 3rem;
+}
+
+.card img {
+  width: 80%;
+  object-fit: cover;
+}
+
+.card p {
+  text-align: left;
+  margin: 0 10px;
+}
+
+.card a {
+  border: 1px solid #000000;
+  border-radius: 16px;
+  padding: 5px;
+  display: inline-block;
+  margin: 10px 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.more-article {
+  margin: 1rem;
+  padding: 0 10px;
+  border: 1px solid #000000;
+  border-radius: 24px;
+}
+/* Food Page End */
+
+/* Food Traditional Page Start */
+.suggestion {
+  margin-left: 15px;
+  font-size: 0.8rem;
+  list-style-type: circle;
+}
+
+.suggestion-list ul {
+  margin-left: 15px;
+  list-style-type: square;
+}
+
+.suggestion-list ol {
+  margin-left: 1.5rem;
+}
+/* Food Traditional Page End */
+
+/* Transportation Page Start */
+.trans-page ul {
+  list-style-type: circle;
+  margin-left: 1.5rem;
+}
+
+.trans-page ol {
+  margin-left: 1.5rem;
+}
+
+.trans-section {
+  background-image: url(../images/taipei-illustration.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 80vh;
+  text-align: center;
+  position: relative;
+}
+
+.trans-section div {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  background-color: #ffffff;
+}
+
+.passes-section img {
+  width: 80%;
+  margin: 1rem;
+  border-radius: 24px;
+  display: block;
+}
+
+.metro-section img,
+.taxi-section img {
+  width: 40%;
+  margin: 1rem;
+  border-radius: 24px;
+}
+
+.youbike-section img {
+  width: 50%;
+  margin: 1rem;
+  border-radius: 24px;
+}
+
+.app {
+  width: 3rem;
+}
+
+/* Transportation Page End */
+
+/* Reference Start */
+.reference {
+  margin-left: 1.5rem;
+  list-style-type: circle;
+}
+/* Reference End */
+
+/*phone screen media query*/
+@media only screen and (max-width: 700px) {
+  iframe {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  /* Nav Bar Start */
+  .navbar-large {
+    display: none;
+  }
+
+  .navbar-small {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .navbar-small input {
+    display: none;
+  }
+
+  .navbar-small label {
+    float: right;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    line-height: 50px;
+    width: 50px;
+  }
+
+  .menu {
+    clear: both;
+    background: #ffffff;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s; /*animation second*/
+    position: absolute;
+    z-index: 100;
+  }
+
+  .menu li {
+    margin-left: 10px;
+    border-bottom: 1px solid #efefef;
+  }
+
+  /*to control when to show the navbar list*/
+  input:checked ~ .menu {
+    max-height: 100vh;
+    width: 100vw;
+    overflow: scroll;
+  }
+  /* Nav Bar End*/
+
+  /* Footer Start */
+  footer {
+    flex-wrap: wrap;
+  }
+
+  footer li {
+    flex: 0 0 calc(50% - 20px);
+    margin: 0;
+  }
+  /* Footer End */
+
+  /* Time and Weather Start */
+  .time-and-weather {
+    position: static;
+  }
+  /* Time and Weather End */
+
+  /* Index page Start */
+  .home-section div {
+    font-size: 1rem;
+  }
+
+  .about-section .visit-page,
+  .activities-section .visit-page,
+  .transportation-section .visit-page {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+
+  .about-section img,
+  .food-section img,
+  .activities-section img,
+  .itineraries-section img,
+  .transportation-section img {
+    width: 80%;
+  }
+
+  .food-section .visit-page,
+  .itineraries-section .visit-page {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* Index page End */
+
+  /* About Page Start */
+  .geo-section {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+
+  .geo-section img {
+    width: 80%;
+  }
+
+  .weather-section img {
+    width: 80%;
+  }
+  /* About Page End */
+
+  /* Food Page Start */
+  .cards {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 80%;
+  }
+  /* Food Page End */
+  /* Transportation Page Start */
+  .trans-section div {
+    font-size: 0.8rem;
+    top: 13rem;
+  }
+
+  .passes-section .visit-page {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+
+  .metro-section .visit-page,
+  .youbike-section .visit-page,
+  .taxi-section .visit-page {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .metro-section img {
+    width: 70%;
+  }
+
+  .taxi-section img,
+  .youbike-section img {
+    width: 80%;
+  }
+
+  .app {
+    width: 20%;
+  }
+  /* Transportation Page End */
+}
